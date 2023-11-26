@@ -1,6 +1,6 @@
 //propiedades de producto: title, description,price, thumbnail, code, stock
 
-//metodos addProduct, getProducts, getProductById
+//metodos addProduct, getProducts, getProductById, deleteProductById
 
 //clase de administrcion de productos
 class ProductManager {
@@ -14,6 +14,11 @@ class ProductManager {
     getProductById =(productId)=>{
         const producto = this.products.find(product=>product.id===productId)
         return producto
+    }
+
+    deleteProductoById=(productId)=>{
+        this.products = this.products.filter(product=>product.id!==productId)
+        return this.products  
     }
 
     #verificarCode =(code)=>{
@@ -88,4 +93,7 @@ console.log('primer argumento vacio')
 producto1.addProduct('','Paquete por 150 gr',10,'./imagenes/marge1.jpg','L09876',400)
 console.log('precio 0')
 producto1.addProduct('Velas','Paquete por 12 ',0,'./imagenes/marge1.jpg','L09876',400)
+console.log('_______________________________')
+console.log('eleminamos un producto y retornamos todos los productos')
+console.log(producto1.deleteProductoById(2))
 
