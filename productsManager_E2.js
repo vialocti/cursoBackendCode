@@ -1,4 +1,5 @@
 //funciones agregar, modificar,eliminar y consultar productos
+
 const fs = require('fs')
 
 class ProductManager{
@@ -155,6 +156,7 @@ const modificarProducto=async(id,datos)=>{
 //eliminarProducto(1)
 
 //ejemplo de modificar enviando objeto completo
+
 datosmodi={
     title:'Alma Mora merlot',
     description:'Merlot de altura valle del pedernal 98 puntos premio NY ',
