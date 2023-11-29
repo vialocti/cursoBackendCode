@@ -8,6 +8,8 @@ const app=express()
 app.use(express.urlencoded({extended:true}))
 //rutas
 
+
+//todos los productos o una parte informado por el limit
 app.get('/products',async(req,res)=>{
 
     
@@ -33,6 +35,7 @@ app.get('/products',async(req,res)=>{
 
 })
 
+//consultar producto por id
 app.get('/product/:pid',async(req,res)=>{
     
     const { pid }=req.params
